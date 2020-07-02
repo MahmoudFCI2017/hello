@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeventhFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="30sp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray">
+
+            <ImageView
+                android:id="@+id/iv_fingerprint_attend"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_fingerprint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circle_textview" />
+
+            <LinearLayout
+                android:id="@+id/circle_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_textview"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:text="15:19"
+                    android:textColor="@color/black"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="ساعات العمل"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_signFingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="تسجيل إنصراف"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:fontFamily="@font/tajawal_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_fingerprint_attend"
+                app:layout_constraintEnd_toStartOf="@+id/iv_fingerprint_attend"
+                app:layout_constraintTop_toTopOf="@+id/iv_fingerprint_attend"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
